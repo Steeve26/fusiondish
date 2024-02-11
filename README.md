@@ -1,2 +1,2 @@
-# fusiondish
+# Fusion Dish
 A restaurant website
