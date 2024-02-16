@@ -1,0 +1,112 @@
+.main {
+  padding-inline: 2em;
+}
+.heroHeader {
+  margin-left: 550px;
+  padding-top: 10em;
+  max-width: 550px;
+}
+.heroHeader h1 {
+  font-size: 3em;
+}
+.mealAction {
+  display: flex;
+  align-items: center;
+  gap: 3em;  
+  margin-top: 1em;
+  min-height: 46px;
+}
+.mealAction span {
+  font-size: 1.4em;
+  font-weight: 600;
+  color: rgb(255, 34, 0);
+}
+.mealAction button {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: #2e2e2f;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-bottom: 4px solid #2b6cb0;
+  font-weight: 700;
+  color: white;
+  line-height: 26px;
+  transition: .2s linear;
+}
+.mealAction button:hover {
+  transform: translateY(5px);
+  border-bottom-width: 2px;
+}
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  overflow-x: scroll;
+  height: 15em;
+  margin-top: 3.5em;
+  padding-inline: 1em;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel .cards {
+  min-width: 13em;
+  height: 203px;
+  background-color: #2e2e2f;
+  border-radius: 10px;
+  border-top-left-radius: 2em;
+  display: flex;
+  flex-direction: column;
+  transition: .2s linear;
+  border: 2px solid transparent;
+}
+.carousel .cards:hover {
+  box-shadow: #00000029 0 1px 4px, #333 0 0 0 3px, #00000017 0 2px 1px, #00000017 0 4px 2px, #00000017 0 8px 4px, #00000017 0 13px 8px, #00000017 0 14px 16px;
+  border-color: white;
+}
+.carousel .cards > div {
+  height: 50%;
+}
+.carousel .cards .topHalf {
+  display: flex;
+  gap: 1em;
+}
+.carousel .cards .topHalf img {
+  width: 62%;
+  height: 125px;
+  transform: translate(-1em, -1em);
+}
+.carousel .cards .topHalf span {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel .cards .bottomHalf {
+  text-transform: capitalize;
+  padding-inline: 1em;
+  color: white;
+}
+.carousel .cards .bottomHalf h3 {
+  margin-top: .5em;
+}
+.carousel .cards .bottomHalf p {
+  color: rgb(173, 173, 173);
+  margin-bottom: .4em;
+}
+.carousel .cards .infoAction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carousel .cards .infoAction button {
+  transition: .1s linear;
+  color: white;
+}
+.carousel .cards .infoAction button:hover {
+  color: #2b6cb0;
+}
+
