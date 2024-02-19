@@ -105,7 +105,7 @@
   margin-top: .5em;
 }
 .carousel .cards .bottomHalf p {
-  color: rgb(173, 173, 173);
+  color: #adadad;
   margin-bottom: .4em;
 }
 .carousel .cards .infoAction {
@@ -123,5 +123,16 @@
 @media only screen and (max-width: 1160px) {
   .heroHeader {
     margin-left: 440px;
+  }
+}
+@media only screen and (max-height: 750px) {
+  .heroHeader {
+    padding-top: 7em;
+    font-size: .9em;
+  }
+}
+@media only screen and (max-height: 620px) {
+  .heroHeader {
+    padding-top: 5em;
   }
 }

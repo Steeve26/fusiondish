@@ -18,7 +18,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   gap: 1em;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: #63636333 0px 2px 8px 0px;
   padding-right: 2em;
   padding-block: 1em;
   position: relative;
@@ -64,6 +64,7 @@ const Button = styled.button`
 `
 const ImageContainer = styled.div`
   height: 60vh;
+  min-height: 330px;
   width: 19em;
   background-color: #282828;
   display: flex;
@@ -77,7 +78,11 @@ const ImageContainer = styled.div`
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   transition: .3s linear;
-`
+  @media only screen and (max-height: 750px) {
+    height: 50vh !important;
+    width: 15em;
+  }
+  `
 const HeroImage = styled.img`
   width: 108%;
   transform: translateY(0.5em);
