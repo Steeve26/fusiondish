@@ -127,18 +127,14 @@
 }
 @media only screen and (max-height: 750px) {
   .heroHeader {
-    padding-top: 7em;
     font-size: .8em;
-  }
-}
-@media only screen and (max-height: 620px) {
-  .heroHeader {
-    padding-top: 5em;
+    padding-top: 16vh;
   }
 }
 @media only screen and (max-height: 660px) {
   .heroHeader {
     margin-bottom: 3em;
+    padding-top: 80px;
   }
   .carousel {
     height: 15em;

@@ -45,7 +45,7 @@ const List = styled.li`
   &::after {
     content: '';
     position: absolute;
-    bottom: -20px;
+    bottom: -16px;
     left: 0;
     height: 3px;
     width: 0%;
