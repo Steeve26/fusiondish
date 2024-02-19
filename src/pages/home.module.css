@@ -1,10 +1,14 @@
 .main {
   padding-inline: 2em;
+  min-height: calc(100vh - 61.99px);
+  display: flex;
+  flex-direction: column;
 }
 .heroHeader {
   margin-left: 550px;
   padding-top: 10em;
   max-width: 550px;
+  transition: .2s linear;
 }
 .heroHeader h1 {
   font-size: 3em;
@@ -46,7 +50,8 @@
   gap: 2em;
   overflow-x: scroll;
   height: 16em;
-  margin-top: 2.5em;
+  margin-top: auto;
+  margin-bottom: 1em;
   padding-inline: 2em;
 }
 .carousel::-webkit-scrollbar {
@@ -115,4 +120,8 @@
 .carousel .cards .infoAction button:hover {
   color: #2b6cb0;
 }
-
+@media only screen and (max-width: 1160px) {
+  .heroHeader {
+    margin-left: 440px;
+  }
+}

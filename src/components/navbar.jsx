@@ -19,7 +19,7 @@ const Nav = styled.nav`
   justify-content: space-between;
   gap: 1em;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  padding-inline: 37em 2em;
+  padding-right: 2em;
   padding-block: 1em;
   position: relative;
 `
@@ -31,6 +31,11 @@ const Links = styled.ul`
   align-items: center;
   &:last-of-type {
     gap: 1.5em;
+  }
+  @media (max-width: 1000px ) {
+    &:first-of-type {
+      display: none;
+    }
   }
 `
 
@@ -58,20 +63,20 @@ const Button = styled.button`
   text-transform: capitalize;
 `
 const ImageContainer = styled.div`
-    height: 28em;
-    width: 19em;
-    background-color: #282828;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    position: absolute;
-    left: 5em;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    top: 0%;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-    transition: .3s linear;
+  height: 60vh;
+  width: 19em;
+  background-color: #282828;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  left: 5em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  top: 0%;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  transition: .3s linear;
 `
 const HeroImage = styled.img`
   width: 108%;
@@ -105,9 +110,17 @@ const HomeLink = styled.a`
     right: 17%;
     top: -6px;
   } */
-  
 `
 
+const LinksContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 13em;
+  transition: .2s linear;
+  @media (max-width: 1160px ) {
+    gap: 5em;
+  }
+`
 export default function navbar() {
   return (
     <Nav>
@@ -119,7 +132,7 @@ export default function navbar() {
         <HeroImage src={food1} alt="food"/>
       </ImageContainer>
 
-      <div className="links" style={{display: 'flex', justifyContent: 'space-between', gap: '13em'}}>
+      <LinksContainer>
         <Links>
           <List>home</List>
           <List>shop</List>
@@ -131,7 +144,7 @@ export default function navbar() {
           <Button><FiShoppingCart size={20}/></Button>
           <Button><img src={avatar} width={30} alt="avatar" /></Button>
         </Links>
-      </div>
+      </LinksContainer>
     </Nav>
   )
 }
