@@ -142,7 +142,7 @@ export default function home() {
             <span className={styles.foodPrice}>${getRandomNumber()}</span>
           </div>
           <div className={styles.bottomHalf}>
-            <h3>roasted chicken</h3>
+            <h3>classic steak</h3>
             <p>per plate</p>
             
             <div className={styles.infoAction}>

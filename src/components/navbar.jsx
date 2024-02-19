@@ -3,6 +3,16 @@ import styled from 'styled-components'
 import food1 from '../assets/food1.png'
 import { FiShoppingCart } from "react-icons/fi";
 import avatar from '../assets/avatar-male-president-svgrepo-com.svg'
+import title from '../assets/logo.png'
+import title2 from '../assets/logo3.png'
+import title3 from '../assets/logo4.png'
+// import title4 from '../assets/logo5.png'
+// import title4 from '../assets/logo6.png'
+// import title4 from '../assets/logo7.png'
+// import title4 from '../assets/logo8.png'
+// import title4 from '../assets/logo9.png'
+import title4 from '../assets/logo10.png'
+// import title4 from '../assets/logo11.png'
 
 const Nav = styled.nav`
   display: flex;
@@ -64,13 +74,38 @@ const ImageContainer = styled.div`
     transition: .3s linear;
 `
 const HeroImage = styled.img`
-  width: 120%;
-  transform: translateY(1em);
+  width: 108%;
+  transform: translateY(0.5em);
   filter: drop-shadow(5px 5px 5px rgb(0, 0, 0, .6));
 `
 const Header = styled.h1`
   color: white;
   font-weight: 600;
+`
+const HomeLink = styled.a`
+  margin-top: .5em;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  font-family: Oswald;
+  font-weight: 600;
+  font-size: 1.8em;
+  /* transform: translateX(10px); */
+  /* &::before {
+    content: 'Fusion';
+    color: white;
+    position: absolute;
+    left: 7%;
+    top: -6px;
+  }
+  &::after {
+    content: 'Dish';
+    color: white;
+    position: absolute;
+    right: 17%;
+    top: -6px;
+  } */
+  
 `
 
 export default function navbar() {
@@ -78,7 +113,9 @@ export default function navbar() {
     <Nav>
       <button> </button>
       <ImageContainer>
-        <Header>FusionDish</Header>
+        {/* <Header>FusionDish</Header> */}
+        {/* <HomeLink href='/'><img src={title} alt="logo" width={35}/></HomeLink> */}
+        <HomeLink href='/'><img src={title4} alt="logo" width={'70%'}/></HomeLink>
         <HeroImage src={food1} alt="food"/>
       </ImageContainer>
 
