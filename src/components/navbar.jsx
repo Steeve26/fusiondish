@@ -32,7 +32,7 @@ const Links = styled.ul`
   &:last-of-type {
     gap: 1.5em;
   }
-  @media (max-width: 1000px ) {
+  @media (max-width: 830px ) {
     &:first-of-type {
       display: none;
     }
@@ -124,6 +124,7 @@ const LinksContainer = styled.div`
   transition: .2s linear;
   @media (max-width: 1160px ) {
     gap: 5em;
+    font-size: .8em;
   }
 `
 export default function navbar() {
@@ -146,8 +147,8 @@ export default function navbar() {
         </Links>
 
         <Links>
-          <Button><FiShoppingCart size={20}/></Button>
-          <Button><img src={avatar} width={30} alt="avatar" /></Button>
+          <Button><FiShoppingCart size={15}/></Button>
+          <Button><img src={avatar} width={20} alt="avatar" /></Button>
         </Links>
       </LinksContainer>
     </Nav>
