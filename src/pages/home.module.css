@@ -187,11 +187,6 @@
     padding-left: 1em;
   }
 }
-@media only screen and (max-width: 430px) {
-  .socials {
-    left: 4px;
-  }
-}
 @media only screen and (max-height: 750px) {
   .heroHeader {
     font-size: .8em;
