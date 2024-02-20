@@ -115,7 +115,7 @@ const HeroImage = styled.img`
   filter: drop-shadow(5px 5px 5px rgb(0, 0, 0, .6));
 `
 const HomeLink = styled.a`
-  margin-top: 1.5em;
+  margin-top: 5px;
   width: 100%;
   position: relative;
   text-align: center;
@@ -139,13 +139,12 @@ const HomeLink = styled.a`
   @media (min-width: 730px ) {
     margin-top: 3px;
   }
-  @media (min-height: 730px ) {
+  @media (min-height: 730px) {
     > img {
       width: 70%;
     }
   }
-  @media (max-height: 750px ) {
-    margin-top: 5px;
+  @media (max-height: 750px ) and (min-width: 730px) {
     > img {
       width: 80%;
     }
@@ -173,7 +172,7 @@ export default function navbar() {
       <ImageContainer>
         {/* <Header>FusionDish</Header> */}
         {/* <HomeLink href='/'><img src={title} alt="logo" width={35}/></HomeLink> */}
-        <HomeLink href='/'><img src={title4} alt="logo" width={'98%'}/></HomeLink>
+        <HomeLink href='/'><img src={title4} alt="logo" width={'70%'}/></HomeLink>
         <HeroImage src={food1} alt="food"/>
       </ImageContainer>
 
