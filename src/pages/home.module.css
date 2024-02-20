@@ -161,18 +161,24 @@
 }
 @media only screen and (max-width: 850px) {
   .heroHeader {
-    margin-left: 370px;
+    margin-left: 387px;
   }
 }
 @media only screen and (max-width: 730px) {
+  .main {
+    padding-inline: 0;
+  }
   .heroHeader {
-    padding-top: 50vh !important;
+    padding-top: 310px !important;
     max-width: 350px;
     margin-inline: auto;
     margin-bottom: 4em;
   }
   .socials {
     position: fixed;
+    right: 1em;
+    left: unset;
+    top: 5em;
   }
   .scrollButtons {
     left: 1em !important;

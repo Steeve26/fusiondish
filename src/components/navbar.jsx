@@ -103,15 +103,14 @@ const ImageContainer = styled.div`
   @media only screen and (max-width: 730px) {
     transform: translateX(-40%);
     left: 40%;
+    height: 300px !important;
+    width: 15em;
   }
-  @media only screen and (max-width: 420px) {
-    width: 13em !important;
-  }
-  @media only screen and (max-height: 750px) {
+  @media only screen and (max-height: 750px) and (min-width: 730px) {
     height: 50vh !important;
     width: 15em;
   }
-  `
+`
 const HeroImage = styled.img`
   width: 108%;
   transform: translateY(0.5em);
@@ -140,7 +139,10 @@ const HomeLink = styled.a`
     top: -6px;
   } */
   @media (min-height: 670px ) {
-    margin-top: 2.5em;
+    margin-top: .3em;
+    > img {
+      width: 70%;
+    }
   }
 `
 
