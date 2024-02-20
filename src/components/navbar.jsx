@@ -137,7 +137,7 @@ const HomeLink = styled.a`
     top: -6px;
   } */
   @media (min-height: 730px ) {
-    margin-top: 2.5em;
+    margin-top: 3px;
     > img {
       width: 70%;
     }
@@ -148,7 +148,7 @@ const HomeLink = styled.a`
       width: 80%;
     }
   }
-  @media (min-height: 900px ) {
+  @media (min-height: 900px) and (min-width: 830px) {
     margin-block: auto;
   }
 `
