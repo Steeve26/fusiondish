@@ -51,7 +51,6 @@ const Links = styled.ul`
     }
   }
 `
-
 const List = styled.li`
   position: relative;
   cursor: pointer;
@@ -115,7 +114,7 @@ const HeroImage = styled.img`
   filter: drop-shadow(5px 5px 5px rgb(0, 0, 0, .6));
 `
 const HomeLink = styled.a`
-  margin-top: 5px;
+  margin-top: 6.5px;
   width: 100%;
   position: relative;
   text-align: center;
