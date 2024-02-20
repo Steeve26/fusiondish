@@ -136,8 +136,10 @@ const HomeLink = styled.a`
     right: 17%;
     top: -6px;
   } */
-  @media (min-height: 730px ) {
+  @media (min-width: 730px ) {
     margin-top: 3px;
+  }
+  @media (min-height: 730px ) {
     > img {
       width: 70%;
     }
