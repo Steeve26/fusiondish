@@ -39,12 +39,10 @@ const Links = styled.ul`
   &:first-of-type {
     height: 100%;
   }
-  &:last-of-type {
-    gap: 1.5em;
-  }
-  @media (max-width: 1160px) {
+  @media (max-width: 800px) {
     &:last-of-type {
-      font-size: 1.1em;
+      font-size: 1.35em;
+      gap: 1.5em;
     }
   }
   @media (max-width: 830px ) {
@@ -58,7 +56,7 @@ const List = styled.li`
   position: relative;
   cursor: pointer;
   height: 100%;
-  line-height: 4;
+  line-height: 4.6;
   &::after {
     content: '';
     position: absolute;
@@ -138,11 +136,20 @@ const HomeLink = styled.a`
     right: 17%;
     top: -6px;
   } */
-  @media (min-height: 670px ) {
-    margin-top: .3em;
+  @media (min-height: 730px ) {
+    margin-top: 2.5em;
     > img {
       width: 70%;
     }
+  }
+  @media (max-height: 750px ) {
+    margin-top: 5px;
+    > img {
+      width: 80%;
+    }
+  }
+  @media (min-height: 900px ) {
+    margin-block: auto;
   }
 `
 
