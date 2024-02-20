@@ -7,7 +7,7 @@
   padding: 0;
   box-sizing: border-box;
   outline: transparent;
-  font-family: poppins;
+  font-family: poppins, sans-serif;
 }
 body {
   min-height: 100vh;
@@ -27,4 +27,18 @@ button {
   border: none;
   cursor: pointer;
   font-size: 1em;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: grey;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #282828;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-corner {
+  display: none;
 }

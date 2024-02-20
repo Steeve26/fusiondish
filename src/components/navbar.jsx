@@ -26,6 +26,9 @@ const Nav = styled.nav`
   @media only screen and (max-width: 900px) {
     padding-inline: 1.2em;
   }
+  @media only screen and (max-width: 420px) {
+    padding-inline: .8em;
+  }
 `
 
 const Links = styled.ul`
@@ -67,7 +70,7 @@ const List = styled.li`
     border-radius: 10em;
     background: #333;
   }
-  &:hover::after {
+  &:hover::after, :focus-visible::after {
     width: 100%;
   }
 `
@@ -97,6 +100,13 @@ const ImageContainer = styled.div`
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   transition: .3s linear;
+  @media only screen and (max-width: 730px) {
+    transform: translateX(-40%);
+    left: 40%;
+  }
+  @media only screen and (max-width: 420px) {
+    width: 13em !important;
+  }
   @media only screen and (max-height: 750px) {
     height: 50vh !important;
     width: 15em;

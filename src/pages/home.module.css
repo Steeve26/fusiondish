@@ -40,9 +40,13 @@
   line-height: 26px;
   transition: .2s linear;
 }
-.mealAction button:hover {
+.mealAction button:hover, .mealAction button:focus-visible {
   transform: translateY(5px);
   border-bottom-width: 2px;
+}
+.carouselWrapper {
+  position: relative;
+  margin: auto 0 0 1.5em;
 }
 .carousel {
   display: flex;
@@ -50,7 +54,6 @@
   gap: 2em;
   overflow-x: scroll;
   height: 16em;
-  margin: auto 0 0 1.5em;
   padding-inline: 2em;
 }
 .carousel::-webkit-scrollbar {
@@ -119,6 +122,23 @@
 .carousel .cards .infoAction button:hover {
   color: #2b6cb0;
 }
+.carouselWrapper .scrollButtons {
+  display: flex;  
+  gap: 2em;
+  position: absolute;
+  left: 2.5em;
+  top: -1.5em;
+  z-index: 22;
+}
+.carouselWrapper .scrollButtons button {
+  transition: .2s linear;
+}
+.carouselWrapper .scrollButtons button:hover, .carouselWrapper .scrollButtons button:focus-visible {
+  color: #2b6cb0;
+}
+.carouselWrapper .scrollButtons button:last-of-type {
+  transform: rotateY(180deg);
+}
 .socials {
   position: absolute;
   left: 1em;
@@ -127,9 +147,43 @@
   flex-direction: column;
   gap: 1em;
 }
+.socials a svg {
+  transition: .2s linear;
+}
+.socials a:hover svg, .socials a:focus-visible svg {
+  color: #2b6cb0;
+  fill: #2b6cb0;
+}
 @media only screen and (max-width: 1160px) {
   .heroHeader {
     margin-left: 440px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .heroHeader {
+    margin-left: 370px;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .heroHeader {
+    padding-top: 50vh !important;
+    max-width: 350px;
+    margin-inline: auto;
+    margin-bottom: 4em;
+  }
+  .socials {
+    position: fixed;
+  }
+  .scrollButtons {
+    left: 1em !important;
+  }
+  .carousel {
+    padding-left: 1em;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .socials {
+    left: 4px;
   }
 }
 @media only screen and (max-height: 750px) {
@@ -140,8 +194,11 @@
 }
 @media only screen and (max-height: 660px) {
   .heroHeader {
-    margin-bottom: 3em;
+    margin-bottom: 6em;
     padding-top: 80px;
+  }
+  .carouselWrapper .scrollButtons {
+    top: -2em;
   }
   .carousel {
     height: 15em;
