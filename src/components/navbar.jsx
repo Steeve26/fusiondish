@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import food1 from '../assets/food1.png'
 import { FiShoppingCart } from "react-icons/fi";
+import { RiMenu2Fill } from "react-icons/ri";
 import avatar from '../assets/avatar-male-president-svgrepo-com.svg'
 import title from '../assets/logo.png'
 import title2 from '../assets/logo3.png'
@@ -18,10 +19,13 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   gap: 1em;
+  height: 57px;
   box-shadow: #63636333 0px 2px 8px 0px;
-  padding-right: 2em;
-  padding-block: 1em;
+  padding-inline: 1.2em 2em;
   position: relative;
+  @media only screen and (max-width: 900px) {
+    padding-inline: 1.2em;
+  }
 `
 
 const Links = styled.ul`
@@ -29,8 +33,16 @@ const Links = styled.ul`
   gap: 2em;
   text-transform: capitalize;
   align-items: center;
+  &:first-of-type {
+    height: 100%;
+  }
   &:last-of-type {
     gap: 1.5em;
+  }
+  @media (max-width: 1160px) {
+    &:last-of-type {
+      font-size: 1.1em;
+    }
   }
   @media (max-width: 830px ) {
     &:first-of-type {
@@ -42,10 +54,12 @@ const Links = styled.ul`
 const List = styled.li`
   position: relative;
   cursor: pointer;
+  height: 100%;
+  line-height: 4;
   &::after {
     content: '';
     position: absolute;
-    bottom: -16px;
+    bottom: 0;
     left: 0;
     height: 3px;
     width: 0%;
@@ -61,6 +75,11 @@ const Button = styled.button`
   display: flex;
   gap: 1em;
   text-transform: capitalize;
+  &:last-of-type {
+    > img {
+      width: 1.4375em;
+    }
+  }
 `
 const ImageContainer = styled.div`
   height: 60vh;
@@ -88,18 +107,13 @@ const HeroImage = styled.img`
   transform: translateY(0.5em);
   filter: drop-shadow(5px 5px 5px rgb(0, 0, 0, .6));
 `
-const Header = styled.h1`
-  color: white;
-  font-weight: 600;
-`
 const HomeLink = styled.a`
-  margin-top: .5em;
+  margin-top: 1.5em;
   width: 100%;
   position: relative;
   text-align: center;
   font-family: Oswald;
   font-weight: 600;
-  font-size: 1.8em;
   /* transform: translateX(10px); */
   /* &::before {
     content: 'Fusion';
@@ -115,6 +129,9 @@ const HomeLink = styled.a`
     right: 17%;
     top: -6px;
   } */
+  @media (min-height: 670px ) {
+    margin-top: 2.5em;
+  }
 `
 
 const LinksContainer = styled.div`
@@ -122,6 +139,7 @@ const LinksContainer = styled.div`
   justify-content: space-between;
   gap: 13em;
   transition: .2s linear;
+  height: 100%;
   @media (max-width: 1160px ) {
     gap: 5em;
     font-size: .8em;
@@ -130,11 +148,11 @@ const LinksContainer = styled.div`
 export default function navbar() {
   return (
     <Nav>
-      <button> </button>
+      <button><RiMenu2Fill size={25} color='#2e2e2'/></button>
       <ImageContainer>
         {/* <Header>FusionDish</Header> */}
         {/* <HomeLink href='/'><img src={title} alt="logo" width={35}/></HomeLink> */}
-        <HomeLink href='/'><img src={title4} alt="logo" width={'70%'}/></HomeLink>
+        <HomeLink href='/'><img src={title4} alt="logo" width={'98%'}/></HomeLink>
         <HeroImage src={food1} alt="food"/>
       </ImageContainer>
 
@@ -147,8 +165,8 @@ export default function navbar() {
         </Links>
 
         <Links>
-          <Button><FiShoppingCart size={15}/></Button>
-          <Button><img src={avatar} width={20} alt="avatar" /></Button>
+          <Button><FiShoppingCart size={'1.125em'}/></Button>
+          <Button><img src={avatar} alt="avatar" /></Button>
         </Links>
       </LinksContainer>
     </Nav>

@@ -9,7 +9,9 @@ import food6 from '../assets/food6.png'
 import food7 from '../assets/food7.png'
 import food8 from '../assets/food8.png'
 import food9 from '../assets/food9.png'
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart, FaFacebook, FaGithub } from "react-icons/fa";
+import { GrInstagram } from "react-icons/gr";
+import { Link } from 'react-router-dom'
 
 export default function home() {
   function getRandomNumber(rating) {
@@ -19,7 +21,7 @@ export default function home() {
   return (
     <main className={styles.main}>
       <div className={styles.heroHeader}>
-        <h1>Steak Frites</h1>
+        <h1>Steak Frites 🔥</h1>
         <p>New York strip steak, which is a cut of beef from the short loin. 
           It is known for its rich flavor and tenderness. 
           The french fries are thicc, deep-fried, and marinated. </p>
@@ -168,6 +170,17 @@ export default function home() {
         </div>
       </div>
 
+      <div className={styles.socials}>
+        <Link to="https://www.facebook.com/" target='_blank'>
+            <FaFacebook size={25} color='#282828'/>
+        </Link >
+        <Link to="https://www.instagram.com/" target='_blank'>
+            <GrInstagram size={24} color='#282828'/>
+        </Link>
+        <Link to="https://github.com/Steeve26" target='_blank'>
+            <FaGithub size={24} color='#282828'/>
+        </Link >
+      </div>
     </main>
   )
 }
