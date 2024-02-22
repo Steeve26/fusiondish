@@ -29,7 +29,10 @@ const Nav = styled.nav`
   @media only screen and (max-width: 420px) {
     padding-inline: .8em;
   }
-`
+  @media only screen and (max-width: 400px) {
+    padding-right: .6em;
+  }
+  `
 
 const Links = styled.ul`
   display: flex;
@@ -48,6 +51,11 @@ const Links = styled.ul`
   @media (max-width: 830px ) {
     &:first-of-type {
       display: none;
+    }
+  }
+  @media (max-width: 400px) {
+    &:last-of-type {
+      gap: 1.3em;
     }
   }
 `
@@ -70,6 +78,9 @@ const List = styled.li`
   &:hover::after, :focus-visible::after {
     width: 100%;
   }
+  @media (min-width: 1160px) {
+    line-height: 3.8;
+  }
 `
 const Button = styled.button`
   display: flex;
@@ -80,7 +91,7 @@ const Button = styled.button`
       width: 1.4375em;
     }
   }
-`
+  `
 const ImageContainer = styled.div`
   height: 60vh;
   min-height: 330px;
@@ -99,7 +110,7 @@ const ImageContainer = styled.div`
   transition: .3s linear;
   @media only screen and (max-width: 730px) {
     transform: translateX(-40%);
-    left: 40%;
+left: 40%;
     height: 300px !important;
     width: 15em;
   }
@@ -107,7 +118,7 @@ const ImageContainer = styled.div`
     height: 50vh !important;
     width: 15em;
   }
-`
+  `
 const HeroImage = styled.img`
   width: 108%;
   transform: translateY(0.5em);

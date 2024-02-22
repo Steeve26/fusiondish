@@ -20,6 +20,7 @@ export default function home() {
 
   const scrollableDivRef = useRef();
   const [scrollPosition, setScrollPosition] = useState(0);
+  console.log(scrollPosition);
 
   const handleScroll = (direction) => { 
     if (scrollableDivRef.current) {
