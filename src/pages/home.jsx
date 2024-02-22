@@ -10,6 +10,7 @@ import food7 from '../assets/food7.png'
 import food8 from '../assets/food8.png'
 import food9 from '../assets/food9.png'
 import { FaShoppingCart, FaFacebook, FaGithub, FaArrowAltCircleLeft } from "react-icons/fa";
+import { IoMdCloseCircleOutline } from "react-icons/io";
 import { GrInstagram } from "react-icons/gr";
 import { Link } from 'react-router-dom'
 
@@ -222,6 +223,7 @@ export default function home({menu, setMenuOpen}) {
 
       {menu && 
         <div onClick={(e) => e.stopPropagation()} className={styles.mobileMenu} ref={menuRef}>
+          <button onClick={() => setMenuOpen(false)} className={styles.exit}><IoMdCloseCircleOutline size={30} color='red'/></button>
           <ul>
             <li>home</li>
             <li>shop</li>
