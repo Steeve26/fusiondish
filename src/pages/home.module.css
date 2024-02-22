@@ -181,6 +181,7 @@
 .mobileMenu li {
   text-transform: capitalize;
   font-size: 1.5em;
+  cursor: pointer;
 }
 .mobileMenu .exit {
   position: absolute;
