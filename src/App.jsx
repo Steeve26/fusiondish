@@ -5,12 +5,13 @@ import Home from './pages/home'
 import Nav from './components/navbar'
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false)
 
   return (
     <>
-      <Nav/>
+      <Nav menu={menuOpen} setMenuOpen={setMenuOpen}/>
       <Routes>
-        <Route path='/' element={<Home/>}></Route>
+        <Route path='/' element={<Home setMenuOpen={setMenuOpen} menu={menuOpen}/>} ></Route>
       </Routes>
     </>
   )

@@ -13,14 +13,13 @@ import { FaShoppingCart, FaFacebook, FaGithub, FaArrowAltCircleLeft } from "reac
 import { GrInstagram } from "react-icons/gr";
 import { Link } from 'react-router-dom'
 
-export default function home() {
+export default function home({menu, setMenuOpen}) {
   function getRandomNumber(rating) {
     return rating ? (Math.random() * (4.1 - 1 + 1) + 1).toFixed(1) : Math.floor(Math.random() * (48 - 18 + 1)) + 18
   }
 
   const scrollableDivRef = useRef();
   const [scrollPosition, setScrollPosition] = useState(0);
-  console.log(scrollPosition);
 
   const handleScroll = (direction) => { 
     if (scrollableDivRef.current) {
@@ -31,6 +30,24 @@ export default function home() {
       newScrollPosition >= 0 && newScrollPosition <=1380 && setScrollPosition(newScrollPosition); 
     }
   };
+
+  const menuRef = useRef()
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      console.log(event.target.className)
+      menuRef.current && console.log(menuRef.current)
+      if (menuRef.current && event.target.className != 'menuButton' && menu) {
+        setMenuOpen(false)
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [menuRef, menu]);
 
   return (
     <main className={styles.main}>
@@ -202,6 +219,17 @@ export default function home() {
             <FaGithub size={24} color='#282828'/>
         </Link >
       </div>
+
+      {menu && 
+        <div onClick={(e) => e.stopPropagation()} className={styles.mobileMenu} ref={menuRef}>
+          <ul>
+            <li>home</li>
+            <li>shop</li>
+            <li>recipes</li>
+            <li>about us</li>
+          </ul>
+        </div>
+      }
     </main>
   )
 }

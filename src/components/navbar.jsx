@@ -175,10 +175,10 @@ const LinksContainer = styled.div`
     font-size: .8em;
   }
 `
-export default function navbar() {
+export default function navbar({menu, setMenuOpen}) {
   return (
     <Nav>
-      <button><RiMenu2Fill size={25} color='#2e2e2'/></button>
+      <button className='menuButton' onClick={() => setMenuOpen(prev => !prev)}><RiMenu2Fill style={{pointerEvents: 'none'}} size={25} color='#2e2e2'/></button>
       <ImageContainer>
         {/* <Header>FusionDish</Header> */}
         {/* <HomeLink href='/'><img src={title} alt="logo" width={35}/></HomeLink> */}
