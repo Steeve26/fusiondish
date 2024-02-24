@@ -3,6 +3,7 @@ import { FaShoppingCart } from 'react-icons/fa'
 import styles from '../pages/home.module.css'
 
 export default function card(data) {
+
   return (
       <div className={styles.cards}>
         <div className={styles.topHalf}>

@@ -9,7 +9,7 @@ import food6 from '../assets/food6.png'
 import food7 from '../assets/food7.png'
 import food8 from '../assets/food8.png'
 import food9 from '../assets/food9.png'
-import { FaShoppingCart, FaFacebook, FaGithub, FaArrowAltCircleLeft } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaArrowAltCircleLeft } from "react-icons/fa";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { GrInstagram } from "react-icons/gr";
 import { Link } from 'react-router-dom'
@@ -36,8 +36,6 @@ export default function home({menu, setMenuOpen}) {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      console.log(event.target.className)
-      menuRef.current && console.log(menuRef.current)
       if (menuRef.current && event.target.className != 'menuButton' && menu) {
         setMenuOpen(false)
       }
@@ -59,49 +57,49 @@ export default function home({menu, setMenuOpen}) {
     },
     {
       imageSrc: food2,
-      title: "pizza",
+      title: "grilled pork",
       price: getRandomNumber(),
       rating: getRandomNumber(true)
     },
     {
       imageSrc: food3,
-      title: "sushi",
+      title: "spaghetti",
       price: getRandomNumber(),
       rating: getRandomNumber(true)
     },
     {
       imageSrc: food4,
-      title: "sushi",
+      title: "Filet mignon",
       price: getRandomNumber(),
       rating: getRandomNumber(true)
     },
     {
       imageSrc: food5,
-      title: "sushi",
+      title: "Chicken teriyaki",
       price: getRandomNumber(),
       rating: getRandomNumber(true)
     },
     {
       imageSrc: food6,
-      title: "sushi",
+      title: "rib eye",
       price: getRandomNumber(),
       rating: getRandomNumber(true)
     },
     {
       imageSrc: food7,
-      title: "sushi",
+      title: "beef stir fry",
       price: getRandomNumber(),
       rating: getRandomNumber(true)
     },
     {
       imageSrc: food8,
-      title: "sushi",
+      title: "classic steak",
       price: getRandomNumber(),
       rating: getRandomNumber(true)
     },
     {
       imageSrc: food9,
-      title: "sushi",
+      title: "Beetroot gnocchi",
       price: getRandomNumber(),
       rating: getRandomNumber(true)
     },
@@ -123,7 +121,7 @@ export default function home({menu, setMenuOpen}) {
 
       <div className={styles.carouselWrapper}>
         <div className={styles.carousel} ref={scrollableDivRef}>
-          {cardsData.map( (data, index) => {return <Card key={index} {...data}/>})}
+          {cardsData.map( (data, index) => {return <Card key={index} {...data} />})}
         </div>
 
         <div className={styles.scrollButtons}>
