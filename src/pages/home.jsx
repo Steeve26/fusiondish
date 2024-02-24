@@ -13,7 +13,7 @@ import { FaShoppingCart, FaFacebook, FaGithub, FaArrowAltCircleLeft } from "reac
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { GrInstagram } from "react-icons/gr";
 import { Link } from 'react-router-dom'
-
+import Card from '../components/card'
 export default function home({menu, setMenuOpen}) {
   function getRandomNumber(rating) {
     return rating ? (Math.random() * (4.1 - 1 + 1) + 1).toFixed(1) : Math.floor(Math.random() * (48 - 18 + 1)) + 18
@@ -50,6 +50,63 @@ export default function home({menu, setMenuOpen}) {
     };
   }, [menuRef, menu]);
 
+  const cardsData = [
+    {
+      imageSrc: food1,
+      title: "steak Frites",
+      price: getRandomNumber(),
+      rating: getRandomNumber(true)
+    },
+    {
+      imageSrc: food2,
+      title: "pizza",
+      price: getRandomNumber(),
+      rating: getRandomNumber(true)
+    },
+    {
+      imageSrc: food3,
+      title: "sushi",
+      price: getRandomNumber(),
+      rating: getRandomNumber(true)
+    },
+    {
+      imageSrc: food4,
+      title: "sushi",
+      price: getRandomNumber(),
+      rating: getRandomNumber(true)
+    },
+    {
+      imageSrc: food5,
+      title: "sushi",
+      price: getRandomNumber(),
+      rating: getRandomNumber(true)
+    },
+    {
+      imageSrc: food6,
+      title: "sushi",
+      price: getRandomNumber(),
+      rating: getRandomNumber(true)
+    },
+    {
+      imageSrc: food7,
+      title: "sushi",
+      price: getRandomNumber(),
+      rating: getRandomNumber(true)
+    },
+    {
+      imageSrc: food8,
+      title: "sushi",
+      price: getRandomNumber(),
+      rating: getRandomNumber(true)
+    },
+    {
+      imageSrc: food9,
+      title: "sushi",
+      price: getRandomNumber(),
+      rating: getRandomNumber(true)
+    },
+  ]
+
   return (
     <main className={styles.main}>
       <div className={styles.heroHeader}>
@@ -66,141 +123,7 @@ export default function home({menu, setMenuOpen}) {
 
       <div className={styles.carouselWrapper}>
         <div className={styles.carousel} ref={scrollableDivRef}>
-          <div className={styles.cards}>
-            <div className={styles.topHalf}>
-              <img src={food1} alt="food" />
-              <span className={styles.foodPrice}>${getRandomNumber()}</span>
-            </div>
-            <div className={styles.bottomHalf}>
-              <h3>steak Frites</h3>
-              <p>per plate</p>
-        
-              <div className={styles.infoAction}>
-                <span>{getRandomNumber(true)}</span>
-                <button><FaShoppingCart color='inherit' size={19}/></button>
-              </div>
-            </div>
-          </div>
-          <div className={styles.cards}>
-            <div className={styles.topHalf}>
-              <img src={food2} alt="food" />
-              <span className={styles.foodPrice}>${getRandomNumber()}</span>
-            </div>
-            <div className={styles.bottomHalf}>
-              <h3>grilled pork</h3>
-              <p>per plate</p>
-        
-              <div className={styles.infoAction}>
-                <span>{getRandomNumber(true)}</span>
-                <button><FaShoppingCart color='inherit' size={19}/></button>
-              </div>
-            </div>
-          </div>
-          <div className={styles.cards}>
-            <div className={styles.topHalf}>
-              <img src={food3} alt="food" />
-              <span className={styles.foodPrice}>${getRandomNumber()}</span>
-            </div>
-            <div className={styles.bottomHalf}>
-              <h3>Spaghetti</h3>
-              <p>per plate</p>
-        
-              <div className={styles.infoAction}>
-                <span>{getRandomNumber(true)}</span>
-                <button><FaShoppingCart color='inherit' size={19}/></button>
-              </div>
-            </div>
-          </div>
-          <div className={styles.cards}>
-            <div className={styles.topHalf}>
-              <img src={food4} alt="food" />
-              <span className={styles.foodPrice}>${getRandomNumber()}</span>
-            </div>
-            <div className={styles.bottomHalf}>
-              <h3>Filet mignon</h3>
-              <p>per plate</p>
-        
-              <div className={styles.infoAction}>
-                <span>{getRandomNumber(true)}</span>
-                <button><FaShoppingCart color='inherit' size={19}/></button>
-              </div>
-            </div>
-          </div>
-          <div className={styles.cards}>
-            <div className={styles.topHalf}>
-              <img src={food5} alt="food" />
-              <span className={styles.foodPrice}>${getRandomNumber()}</span>
-            </div>
-            <div className={styles.bottomHalf}>
-              <h3>Chicken teriyaki</h3>
-              <p>per plate</p>
-        
-              <div className={styles.infoAction}>
-                <span>{getRandomNumber(true)}</span>
-                <button><FaShoppingCart color='inherit' size={19}/></button>
-              </div>
-            </div>
-          </div>
-          <div className={styles.cards}>
-            <div className={styles.topHalf}>
-              <img src={food6} alt="food" />
-              <span className={styles.foodPrice}>${getRandomNumber()}</span>
-            </div>
-            <div className={styles.bottomHalf}>
-              <h3>rib eye</h3>
-              <p>per plate</p>
-        
-              <div className={styles.infoAction}>
-                <span>{getRandomNumber(true)}</span>
-                <button><FaShoppingCart color='inherit' size={19}/></button>
-              </div>
-            </div>
-          </div>
-          <div className={styles.cards}>
-            <div className={styles.topHalf}>
-              <img src={food7} alt="food" />
-              <span className={styles.foodPrice}>${getRandomNumber()}</span>
-            </div>
-            <div className={styles.bottomHalf}>
-              <h3>beef stir fry</h3>
-              <p>per plate</p>
-        
-              <div className={styles.infoAction}>
-                <span>{getRandomNumber(true)}</span>
-                <button><FaShoppingCart color='inherit' size={19}/></button>
-              </div>
-            </div>
-          </div>
-          <div className={styles.cards}>
-            <div className={styles.topHalf}>
-              <img src={food8} alt="food" />
-              <span className={styles.foodPrice}>${getRandomNumber()}</span>
-            </div>
-            <div className={styles.bottomHalf}>
-              <h3>classic steak</h3>
-              <p>per plate</p>
-        
-              <div className={styles.infoAction}>
-                <span>{getRandomNumber(true)}</span>
-                <button><FaShoppingCart color='inherit' size={19}/></button>
-              </div>
-            </div>
-          </div>
-          <div className={styles.cards}>
-            <div className={styles.topHalf}>
-              <img src={food9} alt="food" />
-              <span className={styles.foodPrice}>${getRandomNumber()}</span>
-            </div>
-            <div className={styles.bottomHalf}>
-              <h3>Beetroot gnocchi</h3>
-              <p>per plate</p>
-        
-              <div className={styles.infoAction}>
-                <span>{getRandomNumber(true)}</span>
-                <button><FaShoppingCart color='inherit' size={19}/></button>
-              </div>
-            </div>
-          </div>
+          {cardsData.map( (data, index) => {return <Card key={index} {...data}/>})}
         </div>
 
         <div className={styles.scrollButtons}>
